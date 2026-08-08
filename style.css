@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Noto Serif Display', serif;
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-container {
+  width: 100%;
+  max-width: 480px;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.block-image {
+  width: 100%;
+  line-height: 0;
+}
+
+.block-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-link {
+  display: block;
+  text-decoration: none;
+}
+
+/* --- СТИЛИ ТАЙМЕРА (ТОЧНО КАК НА ОБРАЗЦЕ) --- */
+.block-timer {
+  padding: 30px 5px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.flip-clock {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3px;
+  width: 100%;
+}
+
+.time-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.digit-pair {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
+
+/* Плашка с цифрой */
+.digit {
+  position: relative;
+  width: 28px;
+  height: 48px;
+  background: linear-gradient(180deg, #323232 0%, #252525 50%, #1c1c1c 51%, #282828 100%);
+  color: #ffffff;
+  font-family: 'Noto Serif Display', serif;
+  font-size: 26px;
+  font-weight: 600;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* Линия посередине (эффект перелистывания) */
+.digit::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #111111;
+  z-index: 3;
+}
+
+/* Градиентное затемнение верхней половины */
+.digit::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.15) 100%);
+  z-index: 2;
+}
+
+/* Двоеточия */
+.separator {
+  color: #2b2b2b;
+  font-size: 22px;
+  font-weight: 700;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 1px;
+}
+
+/* Подписи снизу */
+.timer-label {
+  font-family: 'Noto Serif Display', serif;
+  font-size: 11px;
+  color: #555555;
+  margin-top: 6px;
+  text-align: center;
+}
+
+/* --- АНКЕТА --- */
+.block-form {
+  padding: 30px 20px 50px 20px;
+  background-color: #ffffff;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-label {
+  display: block;
+  font-family: 'Noto Serif Display', serif;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+}
+
+.form-input:focus {
+  border-color: #000;
+}
+
+.radio-label,
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #333;
+}
+
+.radio-label input,
+.checkbox-label input {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  accent-color: #000;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 0;
+  padding: 18px;
+  font-family: 'Noto Serif Display', serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}

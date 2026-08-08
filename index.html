@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приглашение</title>
+  
+  <!-- Шрифт Noto Serif Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="mobile-container">
+    
+    <!-- 1 блок -->
+    <section class="block-image"><img src="s1.png" alt="Фото 1"></section>
+
+    <!-- 2 блок -->
+    <section class="block-image"><img src="s2.png" alt="Фото 2"></section>
+
+    <!-- 3 блок -->
+    <section class="block-image"><img src="s3.png" alt="Фото 3"></section>
+
+    <!-- 4 блок: Таймер -->
+    <section class="block-timer">
+      <div class="flip-clock">
+        
+        <!-- Дни -->
+        <div class="time-group">
+          <div class="digit-pair">
+            <div class="digit" id="days-tens">0</div>
+            <div class="digit" id="days-ones">0</div>
+          </div>
+          <span class="timer-label">Дни</span>
+        </div>
+        
+        <div class="separator">:</div>
+
+        <!-- Часы -->
+        <div class="time-group">
+          <div class="digit-pair">
+            <div class="digit" id="hours-tens">0</div>
+            <div class="digit" id="hours-ones">0</div>
+          </div>
+          <span class="timer-label">Часы</span>
+        </div>
+
+        <div class="separator">:</div>
+
+        <!-- Минуты -->
+        <div class="time-group">
+          <div class="digit-pair">
+            <div class="digit" id="minutes-tens">0</div>
+            <div class="digit" id="minutes-ones">0</div>
+          </div>
+          <span class="timer-label">Минуты</span>
+        </div>
+
+        <div class="separator">:</div>
+
+        <!-- Секунды -->
+        <div class="time-group">
+          <div class="digit-pair">
+            <div class="digit" id="seconds-tens">0</div>
+            <div class="digit" id="seconds-ones">0</div>
+          </div>
+          <span class="timer-label">Секунды</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Блок после таймера -->
+    <section class="block-image"><img src="s6.png" alt="Фото 6"></section>
+
+    <!-- 5 блок: Фото со ссылкой -->
+    <section class="block-image">
+      <a href="https://yandex.com/maps/org/mindal/56858191735/?ll=58.993596%2C53.440399&z=16" class="image-link" target="_blank" rel="noopener noreferrer">
+        <img src="s4.png" alt="Фото 4 с ссылкой">
+      </a>
+    </section>
+
+    <!-- 6 блок -->
+    <section class="block-image"><img src="s5.png" alt="Фото 5"></section>
+
+    <!-- 7 блок: Анкета -->
+    <section class="block-form">
+      <form id="anketa-form" action="#" method="POST">
+        
+        <!-- Имя и фамилия -->
+        <div class="form-group">
+          <label for="name" class="form-label">ВАШЕ ИМЯ И ФАМИЛИЯ</label>
+          <input type="text" id="name" name="name" class="form-input" placeholder="Введите имя и фамилию" required>
+        </div>
+
+        <!-- Подтверждение присутствия -->
+        <div class="form-group">
+          <span class="form-label">ПОДТВЕРДИТЕ ПРИСУТСТВИЕ</span>
+          <label class="radio-label">
+            <input type="radio" name="presence" value="only_ceremony" required>
+            <span>Буду только на церемонии</span>
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="presence" value="only_banquet">
+            <span>Буду только на банкете</span>
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="presence" value="both">
+            <span>Буду на церемонии и на банкете</span>
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="presence" value="declined">
+            <span>К сожалению, не смогу присутствовать</span>
+          </label>
+        </div>
+
+        <!-- Предпочтения по напиткам -->
+        <div class="form-group">
+          <span class="form-label">ВАШИ ПРЕДПОЧТЕНИЯ ПО НАПИТКАМ</span>
+          <label class="checkbox-label">
+            <input type="checkbox" name="drinks[]" value="white_wine">
+            <span>Вино белое</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="drinks[]" value="red_wine">
+            <span>Вино красное</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="drinks[]" value="champagne">
+            <span>Шампанское</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="drinks[]" value="strong">
+            <span>Крепкие напитки (водка, самогон)</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="drinks[]" value="non_alcoholic">
+            <span>Безалкогольные напитки</span>
+          </label>
+        </div>
+
+        <!-- Кнопка отправить -->
+        <button type="submit" class="submit-btn">ОТПРАВИТЬ</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
